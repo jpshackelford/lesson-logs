@@ -1,11 +1,10 @@
-h1. Introduction
+# Introduction
 
 Several high school students recently expressed interest in learning to code and I agreed to help by working on an interesting intial project. This page will log  project activities in case others wish to follow along.
 
-h1. Prepare your environment
+# Prepare your environment
 
 Those working on the project with me are currently all using a Mac so my instructions assume that is what you have. I will happy entertain pull requests for content aimed at helping Linux or Windows users.
-
 
 1.  If you don't have a http://github.com account, please create one. 
 
