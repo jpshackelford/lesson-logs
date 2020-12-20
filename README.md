@@ -18,4 +18,50 @@ Come up with a nice title and create a first entry with today's date and which c
 
 4. Install homebrew.  See https://brew.sh.  We will be using this to make installing other development tools you'll need on your mac much easier.
 
+5. Install Helm. 
 
+```
+$ brew install helm
+$ helm version
+```
+
+6. Install Python 3. 
+
+```
+$ brew install python3
+$ python3 -V
+```
+7. Install Google Cloud SDK
+```
+$ curl https://sdk.cloud.google.com > install.sh
+$ bash install.sh --disable-prompts
+```
+This next bit assumes you are on a recent version of MacOS and using zshell. You can verify this with:
+```
+$ echo $SHELL
+```
+You should see:
+```
+/bin/zsh
+```
+If so, we can add setup the command-line with:
+```
+echo "source ~/google-cloud-sdk/completion.zsh.inc" >> ~/.zprofile
+echo "source ~/google-cloud-sdk/path.zsh.inc" >> ~/.zprofile
+exec -l $SHELL 
+```
+You may see this message:
+```
+zsh compinit: insecure directories, run compaudit for list.
+Ignore insecure directories and continue [y] or abort compinit [n]?
+```
+In which case select n and then use the command below to correct permissions and verify that you no longer see the error.
+```
+compaudit | xargs chmod g-w,o-w
+exec -l $SHELL
+```
+Now you can verify install of the SDK and initialize it.
+```
+$ gcloud -v
+$ gcloud init
+```
