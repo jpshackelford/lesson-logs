@@ -18,21 +18,19 @@ Come up with a nice title and create a first entry with today's date and which c
 
 4\. Install [homebrew](https://brew.sh).  We will be using this to make installing other development tools you'll need on your mac much easier.
 
-5\. Install Helm. 
-
 ```
 $ brew install helm
 $ helm version
 ```
 
-6\. Install Python 3. 
+5\. Install Python 3. 
 
 ```
 $ brew install python3
 $ python3 -V
 ```
 
-7\. Install the `mcpi` python library.
+6\. Install the `mcpi` python library.
 
 ```
 pip3 install mcpi
