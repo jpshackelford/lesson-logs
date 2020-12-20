@@ -32,38 +32,30 @@ $ brew install python3
 $ python3 -V
 ```
 
-7\. Install Google Cloud SDK
+7\. Install the `mcpi` python library.
 
 ```
-$ curl https://sdk.cloud.google.com > install.sh
-$ bash install.sh --disable-prompts
+pip3 install mcpi
 ```
-This next bit assumes you are on a recent version of MacOS and using zshell. You can verify this with:
+
+# Create a Minecraft Server w/ Spigot and the Raspberry Juice Library
+
+This step we will skip for now. I have done this for you and will email credentials to the server. Later we will come back and do this together.
+
+# Write you first program to test the plugin and connectivity.
+
+1\. Create a new file with VSCode called `mcpi-test.py` and insert the content below.
+
 ```
-$ echo $SHELL
+from mcpi.minecraft import Minecraft
+
+mchost = "" # replace this with the ip address I send via email
+mc = Minecraft.create(mchost, 4711)
+mc.postToChat("Hello Minecraft World")
 ```
-You should see:
+
+2\. Login to the Minecraft server created in the previous section and once you have done so, run the program you just saved.
+
 ```
-/bin/zsh
-```
-If so, we can add setup the command-line with:
-```
-echo "source ~/google-cloud-sdk/completion.zsh.inc" >> ~/.zprofile
-echo "source ~/google-cloud-sdk/path.zsh.inc" >> ~/.zprofile
-exec -l $SHELL 
-```
-You may see this message:
-```
-zsh compinit: insecure directories, run compaudit for list.
-Ignore insecure directories and continue [y] or abort compinit [n]?
-```
-In which case select n and then use the command below to correct permissions and verify that you no longer see the error.
-```
-compaudit | xargs chmod g-w,o-w
-exec -l $SHELL
-```
-Now you can verify install of the SDK and initialize it.
-```
-$ gcloud -v
-$ gcloud init
+$ python3 mcpi-test.py
 ```
