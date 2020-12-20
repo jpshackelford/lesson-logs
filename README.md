@@ -14,9 +14,9 @@ We will be creating a website which will be your project log. The goal here is t
 
 Come up with a nice title and create a first entry with today's date and which captures what we are doing below.
 
-3. Install VSCode. See https://code.visualstudio.com.   We will be using this for editing code. Once you have installed it, follow the instructions here so that you can start VSCode from the command terminal.   https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line   If something goes wrong with this second step, don't worry about it. We can look at it together when we do our first Zoom session.
+3. Install [VSCode](https://code.visualstudio.com).   We will be using this for editing code. Once you have installed it, you will also want to [configure VSCode](https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line) to start from the command line. If something goes wrong with this second step, don't worry about it. We can look at it together when we do our first Zoom session.
 
-4. Install homebrew.  See https://brew.sh.  We will be using this to make installing other development tools you'll need on your mac much easier.
+4. Install [homebrew](https://brew.sh).  We will be using this to make installing other development tools you'll need on your mac much easier.
 
 5. Install Helm. 
 
@@ -32,6 +32,7 @@ $ brew install python3
 $ python3 -V
 ```
 7. Install Google Cloud SDK
+
 ```
 $ curl https://sdk.cloud.google.com > install.sh
 $ bash install.sh --disable-prompts
